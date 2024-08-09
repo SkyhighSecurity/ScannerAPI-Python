@@ -1,3 +1,23 @@
+# PYTHON CONVERSION - WORK IN PROGRESS
+
+# Dev Notes
+
+- ICAPClient Class: Handles ICAP protocol communication with the ICAP server using socket programming.
+
+- MVCConnection Class: Manages authentication with Skyhigh IAM and Skyhigh Cloud services. This class stores IAM and MVC authentication tokens and handles re-authentication when necessary.
+
+- download_file(url): Downloads a file from a given URL.
+download_s3_file(s3_uri): Downloads a file from an S3 URI.
+Flask Routes:
+
+- /avscan: Endpoint to scan a file either from a URL or S3 URI using the ICAP protocol.
+
+- /dlpscan: Endpoint to perform a DLP scan on a file using McAfee's MVC API.
+Main Application: The Flask application runs the HTTP server and handles incoming scan requests.
+
+
+# LEGACY C# DOCUMENTATION FOLLOWS - TO BE CONVERTED 
+
 # Introduction
 This project provides a REST API front-end to Skyhigh anti-malware and data classification services provided by Skyhigh Web Gateway (antimalware) and Skyhigh Cloud (data classification). The API accepts a URL or S3 UTI as an input and provides a scan response in JSON format.
 The C# code can be run directly as an Azure Function or anywhere else that can run a Docker container to provide a scalable microservice that processes synchronous anti-malware and classification/DLP requests.
